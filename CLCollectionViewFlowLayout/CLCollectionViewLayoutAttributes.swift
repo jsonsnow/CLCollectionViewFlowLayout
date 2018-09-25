@@ -25,12 +25,16 @@ class CLCollectionViewLayoutAttributes: UICollectionViewLayoutAttributes {
         if self.site.row == 0 {
             return nil
         } else {
+            if tempTop != nil {
+                return tempTop
+            }
             if self.pre == nil {
                 return nil
             }
             var temp = self.pre
             while temp != nil {
                 if (temp!.site.row == (self.site.row - 1)) && (temp!.site.line == self.site.line) {
+                    tempTop = temp
                     return temp
                 }
                 temp = temp?.pre
@@ -38,6 +42,8 @@ class CLCollectionViewLayoutAttributes: UICollectionViewLayoutAttributes {
             return nil
         }
     }
+    var tempTop:CLCollectionViewLayoutAttributes?
+    
     //底部布局属性
     weak var bottom:CLCollectionViewLayoutAttributes?
     //所在的行数

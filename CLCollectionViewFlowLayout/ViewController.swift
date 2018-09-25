@@ -27,7 +27,7 @@ class ViewController: UIViewController,UICollectionViewDelegateFlowLayout,UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 21
+        return 100
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -40,18 +40,18 @@ class ViewController: UIViewController,UICollectionViewDelegateFlowLayout,UIColl
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.row % 2 == 0 {
-            return CGSize.init(width: 100, height: 40)
+            return CGSize.init(width: 100, height: 100)
         }
-        return CGSize.init(width: 100, height: 20)
+        return CGSize.init(width: 100, height: 50)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize.init(width: self.view.bounds.size.width, height: 200)
+        return CGSize.zero
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
         if section == 0 {
-            return CGSize.init(width: self.view.bounds.size.width, height: 200)
+            return CGSize.init(width: collectionView.bounds.size.width, height: 10)
         } else {
             return CGSize.zero
         }
