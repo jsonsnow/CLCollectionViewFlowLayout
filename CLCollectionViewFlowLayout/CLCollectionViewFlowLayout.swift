@@ -112,22 +112,17 @@ class CLCollectionViewFlowLayout: UICollectionViewFlowLayout {
                     layoutAttributes.frame = CGRect.init(x: xOffset, y: yOffset, width: itemSize.width, height: itemSize.height)
                 }
                 self.itemAttributes.append(layoutAttributes)
-                if yOffset < layoutAttributes.frame.minY {
-                    yOffset = layoutAttributes.frame.minY
+                if yOffset < layoutAttributes.frame.maxY {
+                    yOffset = layoutAttributes.frame.maxY
                 }
             }
             let itemSize = self.itemSize(at: IndexPath.init(row: collectionView.numberOfItems(inSection: section), section: section))
-            if let footerAttris = self.layoutFooterSectionAttris(at: section, x: self.sectionInset.left, y: yOffset + itemSize.height) {
+            if let footerAttris = self.layoutFooterSectionAttris(at: section, x: self.sectionInset.left, y: yOffset) {
                 yOffset = footerAttris.frame.maxY
                 self.sectionFooterAttributes.append(footerAttris)
-            } else {
-                yOffset += itemSize.height 
             }
             xOffset = self.sectionInset.left
             xNextOffset = self.sectionInset.left
-        }
-        for attris in self.itemAttributes {
-            print("\(attris)")
         }
     }
     
@@ -182,6 +177,10 @@ class CLCollectionViewFlowLayout: UICollectionViewFlowLayout {
     
     override func layoutAttributesForDecorationView(ofKind elementKind: String, at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         return super.layoutAttributesForDecorationView(ofKind: elementKind, at: indexPath)
+    }
+    
+    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+        return true
     }
     
 
