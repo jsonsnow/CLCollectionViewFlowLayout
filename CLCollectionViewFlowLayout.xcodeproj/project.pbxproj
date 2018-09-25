@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BABACF712154C07300066C64 /* CLCollectionViewLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABACF702154C07300066C64 /* CLCollectionViewLayoutAttributes.swift */; };
+		BAF55C2A2150F3F30049EF42 /* CLCollectionConvenientFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF55C292150F3F30049EF42 /* CLCollectionConvenientFlowLayout.swift */; };
 		BAF748482150D191003B229F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF748472150D191003B229F /* AppDelegate.swift */; };
 		BAF7484A2150D191003B229F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF748492150D191003B229F /* ViewController.swift */; };
 		BAF7484D2150D191003B229F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAF7484B2150D191003B229F /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		BAF748522150D193003B229F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAF748502150D193003B229F /* LaunchScreen.storyboard */; };
 		BAF7485D2150D193003B229F /* CLCollectionViewFlowLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF7485C2150D193003B229F /* CLCollectionViewFlowLayoutTests.swift */; };
 		BAF748682150D193003B229F /* CLCollectionViewFlowLayoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF748672150D193003B229F /* CLCollectionViewFlowLayoutUITests.swift */; };
+		BAF748762150D1BA003B229F /* CLCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF748752150D1BA003B229F /* CLCollectionViewFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BABACF702154C07300066C64 /* CLCollectionViewLayoutAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCollectionViewLayoutAttributes.swift; sourceTree = "<group>"; };
+		BAF55C292150F3F30049EF42 /* CLCollectionConvenientFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCollectionConvenientFlowLayout.swift; sourceTree = "<group>"; };
 		BAF748442150D191003B229F /* CLCollectionViewFlowLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLCollectionViewFlowLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF748472150D191003B229F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAF748492150D191003B229F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,7 @@
 		BAF748632150D193003B229F /* CLCollectionViewFlowLayoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CLCollectionViewFlowLayoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF748672150D193003B229F /* CLCollectionViewFlowLayoutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCollectionViewFlowLayoutUITests.swift; sourceTree = "<group>"; };
 		BAF748692150D193003B229F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAF748752150D1BA003B229F /* CLCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,9 @@
 			children = (
 				BAF748472150D191003B229F /* AppDelegate.swift */,
 				BAF748492150D191003B229F /* ViewController.swift */,
+				BAF748752150D1BA003B229F /* CLCollectionViewFlowLayout.swift */,
+				BAF55C292150F3F30049EF42 /* CLCollectionConvenientFlowLayout.swift */,
+				BABACF702154C07300066C64 /* CLCollectionViewLayoutAttributes.swift */,
 				BAF7484B2150D191003B229F /* Main.storyboard */,
 				BAF7484E2150D193003B229F /* Assets.xcassets */,
 				BAF748502150D193003B229F /* LaunchScreen.storyboard */,
@@ -258,6 +267,9 @@
 			files = (
 				BAF7484A2150D191003B229F /* ViewController.swift in Sources */,
 				BAF748482150D191003B229F /* AppDelegate.swift in Sources */,
+				BAF748762150D1BA003B229F /* CLCollectionViewFlowLayout.swift in Sources */,
+				BAF55C2A2150F3F30049EF42 /* CLCollectionConvenientFlowLayout.swift in Sources */,
+				BABACF712154C07300066C64 /* CLCollectionViewLayoutAttributes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
