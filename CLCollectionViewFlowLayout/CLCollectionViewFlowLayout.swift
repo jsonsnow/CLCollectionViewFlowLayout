@@ -71,8 +71,7 @@ class CLCollectionViewFlowLayout: UICollectionViewFlowLayout {
         var xOffset = self.sectionInset.left
         var yOffset = self.sectionInset.top
         var xNextOffset = self.sectionInset.left
-        var yNextOffset = self.sectionInset.top
-        
+        var yItemOffset = self.sectionInset.top
         for section in 0..<sectionCount {
             let headerAttris = self.layoutHeaderSectionAttris(at: section, x: xOffset, y: yOffset)
             if headerAttris != nil {
@@ -95,7 +94,6 @@ class CLCollectionViewFlowLayout: UICollectionViewFlowLayout {
                     pre = layoutAttributes
                 }
                 xNextOffset += self.minimumInteritemSpacing + itemSize.width
-                yNextOffset += self.minimumLineSpacing + itemSize.height
                 if xNextOffset > collectionView.bounds.size.width - self.sectionInset.right {
                     xOffset = self.sectionInset.left
                     xNextOffset = self.sectionInset.left + self.minimumInteritemSpacing + itemSize.width
@@ -109,20 +107,21 @@ class CLCollectionViewFlowLayout: UICollectionViewFlowLayout {
                 if let top = layoutAttributes.top {
                     layoutAttributes.frame = CGRect.init(x: xOffset, y:top.frame.maxY + self.minimumLineSpacing, width: itemSize.width, height: itemSize.height)
                 } else {
-                    layoutAttributes.frame = CGRect.init(x: xOffset, y: yOffset, width: itemSize.width, height: itemSize.height)
+                    layoutAttributes.frame = CGRect.init(x: xOffset, y: yItemOffset, width: itemSize.width, height: itemSize.height)
                 }
                 self.itemAttributes.append(layoutAttributes)
                 if yOffset < layoutAttributes.frame.maxY {
                     yOffset = layoutAttributes.frame.maxY
                 }
+                yItemOffset = layoutAttributes.frame.minY
             }
-            let itemSize = self.itemSize(at: IndexPath.init(row: collectionView.numberOfItems(inSection: section), section: section))
             if let footerAttris = self.layoutFooterSectionAttris(at: section, x: self.sectionInset.left, y: yOffset) {
                 yOffset = footerAttris.frame.maxY
                 self.sectionFooterAttributes.append(footerAttris)
             }
             xOffset = self.sectionInset.left
             xNextOffset = self.sectionInset.left
+            yItemOffset = yOffset
         }
     }
     
