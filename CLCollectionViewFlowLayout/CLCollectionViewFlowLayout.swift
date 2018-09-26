@@ -72,8 +72,8 @@ class CLCollectionViewFlowLayout: UICollectionViewFlowLayout {
         guard let collectionView = self.collectionView else { return  }
         let sectionCount = collectionView.numberOfSections
         var xOffset = self.sectionInset.left
-        var yOffset = self.sectionInset.top
         var xNextOffset = self.sectionInset.left
+        var yOffset = self.sectionInset.top
         var yItemOffset = self.sectionInset.top
         for section in 0..<sectionCount {
             let headerAttris = self.layoutHeaderSectionAttris(at: section, x: xOffset, y: yOffset)
@@ -97,7 +97,7 @@ class CLCollectionViewFlowLayout: UICollectionViewFlowLayout {
                     pre = layoutAttributes
                 }
                 xNextOffset += self.minimumInteritemSpacing + itemSize.width
-                if xNextOffset > collectionView.bounds.size.width - self.sectionInset.right {
+                if xNextOffset > collectionView.bounds.size.width - self.sectionInset.right + self.minimumInteritemSpacing {
                     xOffset = self.sectionInset.left
                     xNextOffset = self.sectionInset.left + self.minimumInteritemSpacing + itemSize.width
                     row += 1

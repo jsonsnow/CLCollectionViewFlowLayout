@@ -40,9 +40,9 @@ class ViewController: UIViewController,UICollectionViewDelegateFlowLayout,UIColl
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.row % 2 == 0 {
-            return CGSize.init(width: (self.view.bounds.size.width-30)/3, height: 100)
+            return CGSize.init(width: (self.view.bounds.size.width-20)/3, height: 100)
         }
-        return CGSize.init(width: (self.view.bounds.size.width-30)/3, height: 50)
+        return CGSize.init(width: (self.view.bounds.size.width-20)/3, height: 50)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
