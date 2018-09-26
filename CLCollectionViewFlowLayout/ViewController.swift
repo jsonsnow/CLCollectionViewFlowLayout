@@ -27,7 +27,7 @@ class ViewController: UIViewController,UICollectionViewDelegateFlowLayout,UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
+        return 99
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -40,9 +40,9 @@ class ViewController: UIViewController,UICollectionViewDelegateFlowLayout,UIColl
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.row % 2 == 0 {
-            return CGSize.init(width: 100, height: 100)
+            return CGSize.init(width: (self.view.bounds.size.width-30)/3, height: 100)
         }
-        return CGSize.init(width: 100, height: 50)
+        return CGSize.init(width: (self.view.bounds.size.width-30)/3, height: 50)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
@@ -86,8 +86,8 @@ class ViewController: UIViewController,UICollectionViewDelegateFlowLayout,UIColl
     
     lazy var layout: CLCollectionViewFlowLayout = {
         let layout = CLCollectionViewFlowLayout.init()
-//        layout.minimumInteritemSpacing = 10
-//        layout.minimumLineSpacing = 10
+        layout.minimumInteritemSpacing = 10
+        layout.minimumLineSpacing = 10
 //        layout.itemSize =  CGSize.init(width: 100, height: 20)
         layout.delegate = self
         return layout

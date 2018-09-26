@@ -134,16 +134,16 @@ class CLCollectionViewFlowLayout: UICollectionViewFlowLayout {
     
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         var result = self.itemAttributes.filter { (layout:UICollectionViewLayoutAttributes) -> Bool in
-            return rect.contains(layout.frame.origin)
+            return rect.intersects(layout.frame)
         }
         _ = self.sectionHeaderAttributes.filter { (layout:UICollectionViewLayoutAttributes) -> Bool in
-            if rect.contains(layout.frame.origin) {
+            if rect.intersects(layout.frame) {
                 result.append(layout)
             }
             return true
         }
         _ = self.sectionFooterAttributes.filter { (layout:UICollectionViewLayoutAttributes) -> Bool in
-            if rect.contains(layout.frame.origin) {
+            if rect.intersects(layout.frame) {
                 result.append(layout)
             }
             return true
