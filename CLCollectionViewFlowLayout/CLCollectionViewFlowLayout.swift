@@ -65,6 +65,9 @@ class CLCollectionViewFlowLayout: UICollectionViewFlowLayout {
     //MARK: - method to override
     override func prepare() {
         super.prepare()
+        if self.itemAttributes.count > 0 {
+            return
+        }
         checkDelegate()
         guard let collectionView = self.collectionView else { return  }
         let sectionCount = collectionView.numberOfSections
@@ -131,16 +134,16 @@ class CLCollectionViewFlowLayout: UICollectionViewFlowLayout {
     
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         var result = self.itemAttributes.filter { (layout:UICollectionViewLayoutAttributes) -> Bool in
-            return rect.contains(layout.frame)
+            return rect.contains(layout.frame.origin)
         }
         _ = self.sectionHeaderAttributes.filter { (layout:UICollectionViewLayoutAttributes) -> Bool in
-            if rect.contains(layout.frame) {
+            if rect.contains(layout.frame.origin) {
                 result.append(layout)
             }
             return true
         }
         _ = self.sectionFooterAttributes.filter { (layout:UICollectionViewLayoutAttributes) -> Bool in
-            if rect.contains(layout.frame) {
+            if rect.contains(layout.frame.origin) {
                 result.append(layout)
             }
             return true
