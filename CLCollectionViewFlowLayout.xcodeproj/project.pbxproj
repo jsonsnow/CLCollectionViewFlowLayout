@@ -103,11 +103,9 @@
 		BAF748462150D191003B229F /* CLCollectionViewFlowLayout */ = {
 			isa = PBXGroup;
 			children = (
+				BAF9A4B1215E2BBB00CDC9B8 /* CLCollectionViewFlowLayout */,
 				BAF748472150D191003B229F /* AppDelegate.swift */,
 				BAF748492150D191003B229F /* ViewController.swift */,
-				BAF748752150D1BA003B229F /* CLCollectionViewFlowLayout.swift */,
-				BAF55C292150F3F30049EF42 /* CLCollectionConvenientFlowLayout.swift */,
-				BABACF702154C07300066C64 /* CLCollectionViewLayoutAttributes.swift */,
 				BAF7484B2150D191003B229F /* Main.storyboard */,
 				BAF7484E2150D193003B229F /* Assets.xcassets */,
 				BAF748502150D193003B229F /* LaunchScreen.storyboard */,
@@ -132,6 +130,16 @@
 				BAF748692150D193003B229F /* Info.plist */,
 			);
 			path = CLCollectionViewFlowLayoutUITests;
+			sourceTree = "<group>";
+		};
+		BAF9A4B1215E2BBB00CDC9B8 /* CLCollectionViewFlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				BAF748752150D1BA003B229F /* CLCollectionViewFlowLayout.swift */,
+				BAF55C292150F3F30049EF42 /* CLCollectionConvenientFlowLayout.swift */,
+				BABACF702154C07300066C64 /* CLCollectionViewLayoutAttributes.swift */,
+			);
+			path = CLCollectionViewFlowLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
