@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CLCollectionViewFlowLayout"
-  s.version      = "1.0.0"
+  s.version      = "1.0.2"
   s.summary      = "CLCollectionViewFlowLayout."
 
   # This description is used to generate tags and improve search results.
