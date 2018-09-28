@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
                     this is CLCollectionViewFlowLayout
                    DESC
 
-  s.homepage     = "https://git.coding.net/kschen/carcomm_iPhone"
+  s.homepage     = "https://github.com/jsonsnow/CLCollectionViewFlowLayout"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -65,7 +65,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  s.platform     = :ios, "7.0"
+  s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
