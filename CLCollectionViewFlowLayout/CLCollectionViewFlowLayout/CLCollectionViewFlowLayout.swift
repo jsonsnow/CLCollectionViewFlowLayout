@@ -13,7 +13,7 @@ class CLCollectionViewFlowLayout: UICollectionViewFlowLayout {
     //MARK: - props
     //item动态宽高则必须实现该协议
     weak var delegate:UICollectionViewDelegateFlowLayout?
-   
+    
     private var itemAttributes = [UICollectionViewLayoutAttributes]()
     private var sectionHeaderAttributes = [UICollectionViewLayoutAttributes]()
     private var sectionFooterAttributes = [UICollectionViewLayoutAttributes]()
@@ -22,7 +22,7 @@ class CLCollectionViewFlowLayout: UICollectionViewFlowLayout {
     //MARK: - private method
     func layoutHeaderSectionAttris(at section:Int,x:CGFloat, y:CGFloat) -> UICollectionViewLayoutAttributes? {
         if let delegate = self.delegate {
-            if delegate.responds(to: #selector(delegate.collectionView(_:layout:minimumLineSpacingForSectionAt:))) {
+            if delegate.responds(to: #selector(delegate.collectionView(_:layout:referenceSizeForHeaderInSection:))) {
                 let sectionSize = self.delegate!.collectionView!(collectionView!, layout: self, referenceSizeForHeaderInSection: section)
                 var sectionHeight:CGFloat = 0
                 if sectionSize != CGSize.zero {
@@ -76,9 +76,10 @@ class CLCollectionViewFlowLayout: UICollectionViewFlowLayout {
         var yOffset = self.sectionInset.top
         var yItemOffset = self.sectionInset.top
         for section in 0..<sectionCount {
-            let headerAttris = self.layoutHeaderSectionAttris(at: section, x: xOffset, y: yOffset)
+            let headerAttris = self.layoutHeaderSectionAttris(at: section, x: 0, y: yOffset)
             if headerAttris != nil {
                 yOffset = headerAttris!.frame.maxY
+                yItemOffset = headerAttris!.frame.maxY
                 self.sectionHeaderAttributes.append(headerAttris!)
             }
             var pre:CLCollectionViewLayoutAttributes?
@@ -118,7 +119,7 @@ class CLCollectionViewFlowLayout: UICollectionViewFlowLayout {
                 }
                 yItemOffset = layoutAttributes.frame.minY
             }
-            if let footerAttris = self.layoutFooterSectionAttris(at: section, x: self.sectionInset.left, y: yOffset) {
+            if let footerAttris = self.layoutFooterSectionAttris(at: section, x: 0, y: yOffset) {
                 yOffset = footerAttris.frame.maxY
                 self.sectionFooterAttributes.append(footerAttris)
             }
@@ -185,5 +186,5 @@ class CLCollectionViewFlowLayout: UICollectionViewFlowLayout {
         return true
     }
     
-
+    
 }
