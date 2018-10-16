@@ -65,9 +65,9 @@ class CLCollectionViewFlowLayout: UICollectionViewFlowLayout {
     //MARK: - method to override
     override func prepare() {
         super.prepare()
-        if self.itemAttributes.count > 0 {
-            return
-        }
+        self.itemAttributes.removeAll()
+        self.sectionHeaderAttributes.removeAll()
+        self.sectionFooterAttributes.removeAll()
         checkDelegate()
         guard let collectionView = self.collectionView else { return  }
         let sectionCount = collectionView.numberOfSections
@@ -185,6 +185,5 @@ class CLCollectionViewFlowLayout: UICollectionViewFlowLayout {
     override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         return true
     }
-    
     
 }
