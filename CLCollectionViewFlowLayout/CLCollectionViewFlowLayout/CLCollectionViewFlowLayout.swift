@@ -134,21 +134,22 @@ class CLCollectionViewFlowLayout: UICollectionViewFlowLayout {
     }
     
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-        var result = self.itemAttributes.filter { (layout:UICollectionViewLayoutAttributes) -> Bool in
-            return rect.intersects(layout.frame)
-        }
-        _ = self.sectionHeaderAttributes.filter { (layout:UICollectionViewLayoutAttributes) -> Bool in
-            if rect.intersects(layout.frame) {
-                result.append(layout)
-            }
-            return true
-        }
-        _ = self.sectionFooterAttributes.filter { (layout:UICollectionViewLayoutAttributes) -> Bool in
-            if rect.intersects(layout.frame) {
-                result.append(layout)
-            }
-            return true
-        }
+        let result = self.itemAttributes + sectionHeaderAttributes + sectionFooterAttributes;
+//        var result = self.itemAttributes.filter { (layout:UICollectionViewLayoutAttributes) -> Bool in
+//            return rect.intersects(layout.frame)
+//        }
+//        _ = self.sectionHeaderAttributes.filter { (layout:UICollectionViewLayoutAttributes) -> Bool in
+//            if rect.intersects(layout.frame) {
+//                result.append(layout)
+//            }
+//            return true
+//        }
+//        _ = self.sectionFooterAttributes.filter { (layout:UICollectionViewLayoutAttributes) -> Bool in
+//            if rect.intersects(layout.frame) {
+//                result.append(layout)
+//            }
+//            return true
+//        }
         return result
     }
     
@@ -180,10 +181,6 @@ class CLCollectionViewFlowLayout: UICollectionViewFlowLayout {
     
     override func layoutAttributesForDecorationView(ofKind elementKind: String, at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         return super.layoutAttributesForDecorationView(ofKind: elementKind, at: indexPath)
-    }
-    
-    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
-        return true
     }
     
 }
