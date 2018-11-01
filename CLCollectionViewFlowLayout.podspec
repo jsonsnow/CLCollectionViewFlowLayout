@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CLCollectionViewFlowLayout"
-  s.version      = "1.0.4"
+  s.version      = "1.0.7"
   s.summary      = "CLCollectionViewFlowLayout."
   s.module_name  = "CLFlowLayout"
 
