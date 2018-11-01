@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BABACF712154C07300066C64 /* CLCollectionViewLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABACF702154C07300066C64 /* CLCollectionViewLayoutAttributes.swift */; };
-		BAF55C2A2150F3F30049EF42 /* CLCollectionConvenientFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF55C292150F3F30049EF42 /* CLCollectionConvenientFlowLayout.swift */; };
+		BA61FC6A218AFEEC00CE7D92 /* CLFlowLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA61FC61218AFEEC00CE7D92 /* CLFlowLayout.framework */; };
+		BA61FC71218AFEEC00CE7D92 /* CLFlowLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA61FC70218AFEEC00CE7D92 /* CLFlowLayoutTests.swift */; };
+		BA61FC73218AFEEC00CE7D92 /* CLFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = BA61FC63218AFEEC00CE7D92 /* CLFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA61FC76218AFEEC00CE7D92 /* CLFlowLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA61FC61218AFEEC00CE7D92 /* CLFlowLayout.framework */; };
+		BA61FC77218AFEEC00CE7D92 /* CLFlowLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BA61FC61218AFEEC00CE7D92 /* CLFlowLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BA61FC7F218AFFE900CE7D92 /* CLCollectionViewLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABACF702154C07300066C64 /* CLCollectionViewLayoutAttributes.swift */; };
+		BA61FC80218AFFE900CE7D92 /* CLCollectionConvenientFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF55C292150F3F30049EF42 /* CLCollectionConvenientFlowLayout.swift */; };
+		BA61FC81218AFFE900CE7D92 /* CLCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF748752150D1BA003B229F /* CLCollectionViewFlowLayout.swift */; };
 		BAF748482150D191003B229F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF748472150D191003B229F /* AppDelegate.swift */; };
 		BAF7484A2150D191003B229F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF748492150D191003B229F /* ViewController.swift */; };
 		BAF7484D2150D191003B229F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAF7484B2150D191003B229F /* Main.storyboard */; };
@@ -16,10 +22,30 @@
 		BAF748522150D193003B229F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAF748502150D193003B229F /* LaunchScreen.storyboard */; };
 		BAF7485D2150D193003B229F /* CLCollectionViewFlowLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF7485C2150D193003B229F /* CLCollectionViewFlowLayoutTests.swift */; };
 		BAF748682150D193003B229F /* CLCollectionViewFlowLayoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF748672150D193003B229F /* CLCollectionViewFlowLayoutUITests.swift */; };
-		BAF748762150D1BA003B229F /* CLCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF748752150D1BA003B229F /* CLCollectionViewFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		BA61FC6B218AFEEC00CE7D92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAF7483C2150D191003B229F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA61FC60218AFEEC00CE7D92;
+			remoteInfo = CLFlowLayout;
+		};
+		BA61FC6D218AFEEC00CE7D92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAF7483C2150D191003B229F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAF748432150D191003B229F;
+			remoteInfo = CLCollectionViewFlowLayout;
+		};
+		BA61FC74218AFEEC00CE7D92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAF7483C2150D191003B229F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA61FC60218AFEEC00CE7D92;
+			remoteInfo = CLFlowLayout;
+		};
 		BAF748592150D193003B229F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BAF7483C2150D191003B229F /* Project object */;
@@ -36,7 +62,27 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BA61FC7D218AFEEC00CE7D92 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BA61FC77218AFEEC00CE7D92 /* CLFlowLayout.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		BA61FC61218AFEEC00CE7D92 /* CLFlowLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CLFlowLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA61FC63218AFEEC00CE7D92 /* CLFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLFlowLayout.h; sourceTree = "<group>"; };
+		BA61FC64218AFEEC00CE7D92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA61FC69218AFEEC00CE7D92 /* CLFlowLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CLFlowLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA61FC70218AFEEC00CE7D92 /* CLFlowLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLFlowLayoutTests.swift; sourceTree = "<group>"; };
+		BA61FC72218AFEEC00CE7D92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BABACF702154C07300066C64 /* CLCollectionViewLayoutAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCollectionViewLayoutAttributes.swift; sourceTree = "<group>"; };
 		BAF55C292150F3F30049EF42 /* CLCollectionConvenientFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCollectionConvenientFlowLayout.swift; sourceTree = "<group>"; };
 		BAF748442150D191003B229F /* CLCollectionViewFlowLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLCollectionViewFlowLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,10 +102,26 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BA61FC5E218AFEEC00CE7D92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA61FC66218AFEEC00CE7D92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA61FC6A218AFEEC00CE7D92 /* CLFlowLayout.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BAF748412150D191003B229F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA61FC76218AFEEC00CE7D92 /* CLFlowLayout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,12 +142,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA61FC62218AFEEC00CE7D92 /* CLFlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				BAF748752150D1BA003B229F /* CLCollectionViewFlowLayout.swift */,
+				BAF55C292150F3F30049EF42 /* CLCollectionConvenientFlowLayout.swift */,
+				BABACF702154C07300066C64 /* CLCollectionViewLayoutAttributes.swift */,
+				BA61FC63218AFEEC00CE7D92 /* CLFlowLayout.h */,
+				BA61FC64218AFEEC00CE7D92 /* Info.plist */,
+			);
+			path = CLFlowLayout;
+			sourceTree = "<group>";
+		};
+		BA61FC6F218AFEEC00CE7D92 /* CLFlowLayoutTests */ = {
+			isa = PBXGroup;
+			children = (
+				BA61FC70218AFEEC00CE7D92 /* CLFlowLayoutTests.swift */,
+				BA61FC72218AFEEC00CE7D92 /* Info.plist */,
+			);
+			path = CLFlowLayoutTests;
+			sourceTree = "<group>";
+		};
 		BAF7483B2150D191003B229F = {
 			isa = PBXGroup;
 			children = (
 				BAF748462150D191003B229F /* CLCollectionViewFlowLayout */,
 				BAF7485B2150D193003B229F /* CLCollectionViewFlowLayoutTests */,
 				BAF748662150D193003B229F /* CLCollectionViewFlowLayoutUITests */,
+				BA61FC62218AFEEC00CE7D92 /* CLFlowLayout */,
+				BA61FC6F218AFEEC00CE7D92 /* CLFlowLayoutTests */,
 				BAF748452150D191003B229F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,6 +181,8 @@
 				BAF748442150D191003B229F /* CLCollectionViewFlowLayout.app */,
 				BAF748582150D193003B229F /* CLCollectionViewFlowLayoutTests.xctest */,
 				BAF748632150D193003B229F /* CLCollectionViewFlowLayoutUITests.xctest */,
+				BA61FC61218AFEEC00CE7D92 /* CLFlowLayout.framework */,
+				BA61FC69218AFEEC00CE7D92 /* CLFlowLayoutTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,7 +190,6 @@
 		BAF748462150D191003B229F /* CLCollectionViewFlowLayout */ = {
 			isa = PBXGroup;
 			children = (
-				BAF9A4B1215E2BBB00CDC9B8 /* CLCollectionViewFlowLayout */,
 				BAF748472150D191003B229F /* AppDelegate.swift */,
 				BAF748492150D191003B229F /* ViewController.swift */,
 				BAF7484B2150D191003B229F /* Main.storyboard */,
@@ -132,19 +218,57 @@
 			path = CLCollectionViewFlowLayoutUITests;
 			sourceTree = "<group>";
 		};
-		BAF9A4B1215E2BBB00CDC9B8 /* CLCollectionViewFlowLayout */ = {
-			isa = PBXGroup;
-			children = (
-				BAF748752150D1BA003B229F /* CLCollectionViewFlowLayout.swift */,
-				BAF55C292150F3F30049EF42 /* CLCollectionConvenientFlowLayout.swift */,
-				BABACF702154C07300066C64 /* CLCollectionViewLayoutAttributes.swift */,
-			);
-			path = CLCollectionViewFlowLayout;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		BA61FC5C218AFEEC00CE7D92 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA61FC73218AFEEC00CE7D92 /* CLFlowLayout.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		BA61FC60218AFEEC00CE7D92 /* CLFlowLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA61FC7C218AFEEC00CE7D92 /* Build configuration list for PBXNativeTarget "CLFlowLayout" */;
+			buildPhases = (
+				BA61FC5C218AFEEC00CE7D92 /* Headers */,
+				BA61FC5D218AFEEC00CE7D92 /* Sources */,
+				BA61FC5E218AFEEC00CE7D92 /* Frameworks */,
+				BA61FC5F218AFEEC00CE7D92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CLFlowLayout;
+			productName = CLFlowLayout;
+			productReference = BA61FC61218AFEEC00CE7D92 /* CLFlowLayout.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BA61FC68218AFEEC00CE7D92 /* CLFlowLayoutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA61FC7E218AFEEC00CE7D92 /* Build configuration list for PBXNativeTarget "CLFlowLayoutTests" */;
+			buildPhases = (
+				BA61FC65218AFEEC00CE7D92 /* Sources */,
+				BA61FC66218AFEEC00CE7D92 /* Frameworks */,
+				BA61FC67218AFEEC00CE7D92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA61FC6C218AFEEC00CE7D92 /* PBXTargetDependency */,
+				BA61FC6E218AFEEC00CE7D92 /* PBXTargetDependency */,
+			);
+			name = CLFlowLayoutTests;
+			productName = CLFlowLayoutTests;
+			productReference = BA61FC69218AFEEC00CE7D92 /* CLFlowLayoutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		BAF748432150D191003B229F /* CLCollectionViewFlowLayout */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAF7486C2150D193003B229F /* Build configuration list for PBXNativeTarget "CLCollectionViewFlowLayout" */;
@@ -152,10 +276,12 @@
 				BAF748402150D191003B229F /* Sources */,
 				BAF748412150D191003B229F /* Frameworks */,
 				BAF748422150D191003B229F /* Resources */,
+				BA61FC7D218AFEEC00CE7D92 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BA61FC75218AFEEC00CE7D92 /* PBXTargetDependency */,
 			);
 			name = CLCollectionViewFlowLayout;
 			productName = CLCollectionViewFlowLayout;
@@ -204,10 +330,17 @@
 		BAF7483C2150D191003B229F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "chen liang";
 				TargetAttributes = {
+					BA61FC60218AFEEC00CE7D92 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					BA61FC68218AFEEC00CE7D92 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = BAF748432150D191003B229F;
+					};
 					BAF748432150D191003B229F = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
@@ -237,11 +370,27 @@
 				BAF748432150D191003B229F /* CLCollectionViewFlowLayout */,
 				BAF748572150D193003B229F /* CLCollectionViewFlowLayoutTests */,
 				BAF748622150D193003B229F /* CLCollectionViewFlowLayoutUITests */,
+				BA61FC60218AFEEC00CE7D92 /* CLFlowLayout */,
+				BA61FC68218AFEEC00CE7D92 /* CLFlowLayoutTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BA61FC5F218AFEEC00CE7D92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA61FC67218AFEEC00CE7D92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BAF748422150D191003B229F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -269,15 +418,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BA61FC5D218AFEEC00CE7D92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA61FC7F218AFFE900CE7D92 /* CLCollectionViewLayoutAttributes.swift in Sources */,
+				BA61FC80218AFFE900CE7D92 /* CLCollectionConvenientFlowLayout.swift in Sources */,
+				BA61FC81218AFFE900CE7D92 /* CLCollectionViewFlowLayout.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA61FC65218AFEEC00CE7D92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA61FC71218AFEEC00CE7D92 /* CLFlowLayoutTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BAF748402150D191003B229F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BAF7484A2150D191003B229F /* ViewController.swift in Sources */,
 				BAF748482150D191003B229F /* AppDelegate.swift in Sources */,
-				BAF748762150D1BA003B229F /* CLCollectionViewFlowLayout.swift in Sources */,
-				BAF55C2A2150F3F30049EF42 /* CLCollectionConvenientFlowLayout.swift in Sources */,
-				BABACF712154C07300066C64 /* CLCollectionViewLayoutAttributes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +464,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		BA61FC6C218AFEEC00CE7D92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA61FC60218AFEEC00CE7D92 /* CLFlowLayout */;
+			targetProxy = BA61FC6B218AFEEC00CE7D92 /* PBXContainerItemProxy */;
+		};
+		BA61FC6E218AFEEC00CE7D92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAF748432150D191003B229F /* CLCollectionViewFlowLayout */;
+			targetProxy = BA61FC6D218AFEEC00CE7D92 /* PBXContainerItemProxy */;
+		};
+		BA61FC75218AFEEC00CE7D92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA61FC60218AFEEC00CE7D92 /* CLFlowLayout */;
+			targetProxy = BA61FC74218AFEEC00CE7D92 /* PBXContainerItemProxy */;
+		};
 		BAF7485A2150D193003B229F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BAF748432150D191003B229F /* CLCollectionViewFlowLayout */;
@@ -332,6 +511,112 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		BA61FC78218AFEEC00CE7D92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7VV5D378YQ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CLFlowLayout/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.weiclicai.UMService.CLFlowLayout;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BA61FC79218AFEEC00CE7D92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7VV5D378YQ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CLFlowLayout/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.weiclicai.UMService.CLFlowLayout;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BA61FC7A218AFEEC00CE7D92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TST4LEUS93;
+				INFOPLIST_FILE = CLFlowLayoutTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.weiclicai.UMService.CLFlowLayoutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CLCollectionViewFlowLayout.app/CLCollectionViewFlowLayout";
+			};
+			name = Debug;
+		};
+		BA61FC7B218AFEEC00CE7D92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TST4LEUS93;
+				INFOPLIST_FILE = CLFlowLayoutTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.weiclicai.UMService.CLFlowLayoutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CLCollectionViewFlowLayout.app/CLCollectionViewFlowLayout";
+			};
+			name = Release;
+		};
 		BAF7486A2150D193003B229F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -449,6 +734,7 @@
 		BAF7486D2150D193003B229F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VV5D378YQ;
@@ -467,6 +753,7 @@
 		BAF7486E2150D193003B229F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VV5D378YQ;
@@ -567,6 +854,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BA61FC7C218AFEEC00CE7D92 /* Build configuration list for PBXNativeTarget "CLFlowLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA61FC78218AFEEC00CE7D92 /* Debug */,
+				BA61FC79218AFEEC00CE7D92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA61FC7E218AFEEC00CE7D92 /* Build configuration list for PBXNativeTarget "CLFlowLayoutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA61FC7A218AFEEC00CE7D92 /* Debug */,
+				BA61FC7B218AFEEC00CE7D92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BAF7483F2150D191003B229F /* Build configuration list for PBXProject "CLCollectionViewFlowLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

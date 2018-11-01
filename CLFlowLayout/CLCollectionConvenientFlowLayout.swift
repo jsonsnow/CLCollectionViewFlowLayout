@@ -9,7 +9,7 @@
 import UIKit
 
 //不设置sectionView的时候，实现固定item宽，和line高的的快捷实现，设置对应的fixedItemSpace、和fixedLineSpace即可
-class CLCollectionConvenientFlowLayout: CLCollectionViewFlowLayout {
+public class CLCollectionConvenientFlowLayout: CLCollectionViewFlowLayout {
 
     //MARK: - props
     //默认itemSpace为10间距

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CLCollectionViewLayoutAttributes: UICollectionViewLayoutAttributes {
+public class CLCollectionViewLayoutAttributes: UICollectionViewLayoutAttributes {
     
     struct CLSite {
         var section = 0

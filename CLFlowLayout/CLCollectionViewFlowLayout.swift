@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CLCollectionViewFlowLayout: UICollectionViewFlowLayout {
+public class CLCollectionViewFlowLayout: UICollectionViewFlowLayout {
     
     //MARK: - props
     //item动态宽高则必须实现该协议
