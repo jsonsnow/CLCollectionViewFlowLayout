@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CLCollectionViewFlowLayout"
-  s.version      = "1.0.7"
+  s.version      = "1.0.8"
   s.summary      = "CLCollectionViewFlowLayout."
   s.module_name  = "CLFlowLayout"
 
@@ -92,7 +92,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files = "CLFlowLayout/*.swift","CLFlowLayout/**"
+  s.source_files = "CLFlowLayout/*.swift","CLFlowLayout/*"
   # s.exclude_files = "Classes/Exclude"
 
   
